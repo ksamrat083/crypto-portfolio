@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root theme colors */
+:root {
+  color-scheme: light dark;
+}
+
+/* Scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 100, 100, 0.6);
+}
+
+/* Smooth theme transitions */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode tweaks */
+.dark {
+  background-color: #0f172a; /* slate-900 */
+  color: #f8fafc; /* slate-50 */
+}
