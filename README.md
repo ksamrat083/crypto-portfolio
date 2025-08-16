@@ -1,69 +1,103 @@
-# React + TypeScript + Vite
+# 📊 Crypto Portfolio Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7d3b1d91-773a-49cb-8a67-f9dc95f77c71/deploy-status)](https://app.netlify.com/sites/crypto-portfolio-dashboard/deploys)
 
-Currently, two official plugins are available:
+🚀 Live Demo: 👉 [https://crypto-portfolio-dashboard.netlify.app](https://crypto-portfolio-dashboard.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📈 **Dashboard** with live coin data: price, market cap, 24h % change
+- 🔎 **Filters**: 
+  - Search by name/symbol  
+  - Show **Top 10 / Top 50 / All** coins  
+  - Filter **positive/negative performers**
+- 💼 **Portfolio Tracking**:
+  - Add coins and holdings
+  - View total value & daily change
+- 🔄 **Auto-refresh prices** every 30 seconds
+- 🧩 **Redux Toolkit** state management
+- 💾 **Local persistence** of filters & portfolio
+- ✅ **Unit tests** for Redux slices & selectors (Jest + RTL)
+- 🎨 Responsive design with TailwindCSS
+- ⚡ Fast builds using Vite
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React Router](https://reactrouter.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/)
+
+---
+
+## 📂 Project Structure
+
+src/
+├── app/ # Redux store & hooks
+├── components/ # Reusable UI components
+├── features/ # Redux slices (coins, filters, portfolio, ui)
+├── pages/ # Dashboard & Portfolio pages
+├── routes/ # AppRouter
+├── middleware/ # Persistence & polling middleware
+├── utils/ # Helpers & formatting
+└── styles/ # Global styles
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/ksamrat083/crypto-portfolio.git
+cd crypto-portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2️⃣ Install dependencies
+```bash
+npm install
 ```
+
+3️⃣ Run locally
+```bash
+npm run dev
+```
+Open http://localhost:5173
+
+4️⃣ Run tests
+```bash
+npm test
+```
+
+5️⃣ Build for production
+```bash
+npm run build
+```
+Deploy the dist/ folder to Netlify or Vercel.
+
+🔗 Deployment
+
+This app is deployed on Netlify with automatic builds from the main branch.
+
+➡️ Live Demo: crypto-portfolio-dashboard.netlify.app
+
+---
+
+## 📸 Screenshots  
+
+### Dashboard  
+![Dashboard Screenshot](public/screenshot-dashboard.png)  
+
+### Portfolio  
+![Portfolio Screenshot](public/screenshot-portfolio.png)  
+
+---
+
+📜 License
+
+MIT License © 2025 @ksamrat083
