@@ -90,11 +90,17 @@ This app is deployed on Netlify with automatic builds from the main branch.
 
 ## 📸 Screenshots  
 
-### Dashboard  
-![Dashboard Screenshot](public/screenshot-dashboard.png)  
+### Dashboard(Dark) 
+![Dashboard Screenshot](public/screenshot-dashboard(Dark).png)
 
-### Portfolio  
-![Portfolio Screenshot](public/screenshot-portfolio.png)  
+### Dashboard(Light) 
+![Dashboard Screenshot](public/screenshot-dashboard(Light).png)  
+
+### Portfolio (Dark) 
+![Portfolio Screenshot](public/screenshot-portfolio(Dark).png)
+
+### Portfolio (Light) 
+![Portfolio Screenshot](public/screenshot-portfolio(Light).png) 
 
 ---
 
